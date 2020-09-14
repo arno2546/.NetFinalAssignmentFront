@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Assignment Front</title>    
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="myScript.js"></script>
+</head>
+<body>
+    <hr>
+    <h3>Create Post</h3>
+    <table>
+        <tr>
+            <td>Post Title</td>
+            <td><input type="text" id="postTitle"></td>
+        </tr>
+        <tr>
+            <td>Post Text</td>
+            <td><input type="text" id="postText"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="createPost">Create Post</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><p id="postCreateMsg"></p></td>
+        </tr>
+    </table>
+    <hr>
+    <h3>Edit Post</h3>
+    <table>
+        <tr>
+            <td>Post Id</td>
+            <td>
+                <select id="editPostSelect">
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Post Title</td>
+            <td><input type="text" id="editPostTitle"></td>
+        </tr>
+        <tr>
+            <td>Post Text</td>
+            <td><input type="text" id="editPostText"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="editPost">Save Changes</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><p id="postEditMsg"></p></td>
+        </tr>
+    </table>
+    <h3>Delete Post</h3>
+    <table>
+        <tr>
+            <td>Post Id</td>
+            <td>
+                <select id="deletePostSelect">
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="deletePost">Delete Post</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><p id="postDeleteMsg"></p></td>
+        </tr>
+    </table>
+    <hr>
+    <h3>Get All Posts</h3>
+    <button id="getPosts">Get Posts</button><br><br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Post Id</th>
+                <th>Post Title</th>
+                <th>Post Body</th>
+            </tr>
+        </thead>
+        <tbody id="posts">
+
+        </tbody>
+    </table>
+    <hr>
+</body>
+</html>
