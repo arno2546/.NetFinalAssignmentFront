@@ -1,3 +1,37 @@
 body{
     text-align: center;
+    font-family:'Lato', sans-serif;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    transition: .5s;
+}
+.navbar-brand a:hover, .navbar-brand a:focus{
+    text-decoration: none;
+}
+.navbar-brand a{
+    color:white;
+    font-size: 1.5em;
+}
+#header-nav{
+    background-color: #021729;
+    border-bottom: 3px solid black;
+}
+button{
+    width:auto;
+    border-radius: 20px;
+}
+button:hover{
+    border-radius: 2px;
+    background-color: #0681e7;
+    color:white;
+    border-radius: 10px;
+    transition: .2s;
+}
+.form-control{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35px;
 }

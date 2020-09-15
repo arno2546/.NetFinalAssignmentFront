@@ -3,195 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Assignment Front</title>    
+    <title>Final Assignment Front</title>  
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">  
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="jquery-3.5.1.js"></script>
     <script type="text/javascript" src="myScript.js"></script>
 </head>
 <body>
-    <hr>
-    <h3>Create Post</h3>
-    <table>
-        <tr>
-            <td>Post Title</td>
-            <td><input type="text" id="postTitle"></td>
-        </tr>
-        <tr>
-            <td>Post Text</td>
-            <td><input type="text" id="postText"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button id="createPost">Create Post</button></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><p id="postCreateMsg"></p></td>
-        </tr>
-    </table>
-    <hr>
-    <h3>Edit Post</h3>
-    <table>
-        <tr>
-            <td>Post Id</td>
-            <td>
-                <select id="editPostSelect">
-
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>Post Title</td>
-            <td><input type="text" id="editPostTitle"></td>
-        </tr>
-        <tr>
-            <td>Post Text</td>
-            <td><input type="text" id="editPostText"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button id="editPost">Save Changes</button></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><p id="postEditMsg"></p></td>
-        </tr>
-    </table>
-    <hr>
-    <h3>Delete Post</h3>
-    <table>
-        <tr>
-            <td>Post Id</td>
-            <td>
-                <select id="deletePostSelect">
-
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button id="deletePost">Delete Post</button></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><p id="postDeleteMsg"></p></td>
-        </tr>
-    </table>
-    <hr>
-    <h3>Get All Posts</h3>
-    <button id="getPosts">Get Posts</button><br><br>
-    <table border="1">
-        <thead>
+    <header>
+        <nav id="header-nav" class="navbar navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <div class="navbar-brand">
+                <a href="index.html">Final Assignment</a>
+              </div>
+            </div>            
+          </div>
+        </nav>
+      </header>
+    <div id="main-content" class="container">
+        <hr>
+        <h3>Create Post</h3>
+        <table> 
             <tr>
-                <th>Post Id</th>
-                <th>Post Title</th>
-                <th>Post Body</th>
+                <td>Post Title</td>
+                <td><input class="form-control" type="text" id="postTitle"></td>
             </tr>
-        </thead>
-        <tbody id="posts">
-
-        </tbody>
-    </table>
-    <hr>
-    <h3>Get Comments from Posts</h3>
-    <select id="commentPostSelect">
-
-    </select>
-    <button id="getComments">Get Comments</button><br><br>
-    <table border="1">
-        <thead>
             <tr>
-                <th>Comment Id</th>
-                <th>Comment Body</th>
-                <th>Post Id</th>
+                <td>Post Text</td>
+                <td>
+                    <textarea id="postText" class="form-control"></textarea>
+                </td>
             </tr>
-        </thead>
-        <tbody id="Comments">
+            <tr>
+                <td></td>
+                <td><button class="form-control" id="createPost">Create Post</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><p id="postCreateMsg"></p></td>
+            </tr>
+        </table>
+        <hr>
+        <h3>Edit Post</h3>
+        <table>
+            <tr>
+                <td>Post Id</td>
+                <td>
+                    <select class="form-control" id="editPostSelect">
 
-        </tbody>
-    </table>
-    <hr>
-    <h3>Create Comment</h3>
-    <table>
-        <tr>
-            <td>
-                Select Post
-            </td>
-            <td>
-                <select id="createCommentPostSelect">
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Post Title</td>
+                <td><input  type="text" class="form-control" id="editPostTitle"></td>
+            </tr>
+            <tr>
+                <td>Post Text</td>
+                <td><input type="text" class="form-control" id="editPostText"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button class="form-control" id="editPost">Save Changes</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><p id="postEditMsg"></p></td>
+            </tr>
+        </table>
+        <hr>
+        <h3>Delete Post</h3>
+        <table>
+            <tr>
+                <td>Post Id</td>
+                <td>
+                    <select class="form-control" id="deletePostSelect">
 
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>Comment Text</td>
-            <td><input type="text" id="commentText"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button id="createComment">Post Comment</button></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><p id="commentCreateMsg"></p></td>
-        </tr>
-    </table>
-    <hr>
-    <h3>Edit Comment</h3>
-    <table>
-        <tr>
-            <td>Post Id</td>
-            <td>
-                <select id="editCommentPostSelect">
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button class="form-control" id="deletePost">Delete Post</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><p id="postDeleteMsg"></p></td>
+            </tr>
+        </table>
+        <hr>
+        <h3>Get All Posts</h3>
+        <button class="form-control" id="getPosts">Get Posts</button><br><br>
+        <table border="1" class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Post Id</th>
+                    <th>Post Title</th>
+                    <th>Post Body</th>
+                </tr>
+            </thead>
+            <tbody id="posts">
 
-                </select>
-            </td>
-            <td>Comment Id</td>
-            <td>
-                <select id="commentSelect">
+            </tbody>
+        </table>
+        <hr>
+        <h3>Get Comments from Posts</h3>
+        <select class="form-control" id="commentPostSelect">
 
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>Comment Text</td>
-            <td><input type="text" id="editCommentText"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button id="editComment">Save Changes</button></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><p id="commentEditMsg"></p></td>
-        </tr>
-    </table>
-    <hr>
-    <h3>Delete Comment</h3>
-    <table>
-        <tr>
-            <td>Post Id</td>
-            <td>
-                <select id="deleteCommentPostSelect">
+        </select>
+        <button class="form-control" id="getComments">Get Comments</button><br><br>
+        <table border="1" class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Comment Id</th>
+                    <th>Comment Body</th>
+                    <th>Post Id</th>
+                </tr>
+            </thead>
+            <tbody id="Comments">
 
-                </select>
-            </td>
-            <td>Comment Id</td>
-            <td>
-                <select id="deleteCommentSelect">
+            </tbody>
+        </table>
+        <hr>
+        <h3>Create Comment</h3>
+        <table>
+            <tr>
+                <td>
+                    Select Post
+                </td>
+                <td>
+                    <select class="form-control" id="createCommentPostSelect">
 
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button id="deleteComment">Delete Comment</button></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><p id="commentDeleteMsg"></p></td>
-        </tr>
-    </table>
-    <hr>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Comment Text</td>
+                <td><input type="text" class="form-control" id="commentText"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button class="form-control" id="createComment">Post Comment</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><p id="commentCreateMsg"></p></td>
+            </tr>
+        </table>
+        <hr>
+        <h3>Edit Comment</h3>
+        <table>
+            <tr>
+                <td>Post Id</td>
+                <td>
+                    <select id="editCommentPostSelect" class="form-control"> 
+
+                    </select>
+                </td>
+                <td>Comment Id</td>
+                <td>
+                    <select class="form-control" id="commentSelect">
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Comment Text</td>
+                <td><input type="text" class="form-control" id="editCommentText"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button class="form-control" id="editComment">Save Changes</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><p id="commentEditMsg"></p></td>
+            </tr>
+        </table>
+        <hr>
+        <h3>Delete Comment</h3>
+        <table>
+            <tr>
+                <td>Post Id</td>
+                <td>
+                    <select class="form-control" id="deleteCommentPostSelect">
+
+                    </select>
+                </td>
+                <td>Comment Id</td>
+                <td>
+                    <select class="form-control" id="deleteCommentSelect">
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button class="form-control" id="deleteComment">Delete Comment</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><p id="commentDeleteMsg"></p></td>
+            </tr>
+        </table>
+        <hr>
+    </div>
 </body>
 </html>
