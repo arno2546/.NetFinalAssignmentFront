@@ -42,11 +42,17 @@ $(document).ready(function(){
     });
 
     $("#createPost").click(function(){
-        createPost();
+        if(CreatePostValidation()){
+            createPost();
+            $("#postCreateMsg").html("");
+        }        
     });
 
     $("#editPost").click(function(){
-        editPost();
+        if(EditPostValidation()){
+            $("#postEditMsg").html("");
+            editPost();
+        }
     });
 
     $("#deletePost").click(function(){
@@ -58,11 +64,17 @@ $(document).ready(function(){
     });
 
     $("#createComment").click(function(){
-        createComment();
+        if(CreateCommenttValidation()){
+            $("#commentCreateMsg").html("");
+            createComment();
+        }
     });
 
     $("#editComment").click(function(){
-        editComment();
+        if(EditCommenttValidation()){
+            $("#commentEditMsg").html("");
+            editComment();
+        }
     });
 
     $("#deleteComment").click(function(){
@@ -305,5 +317,43 @@ $(document).ready(function(){
                 }
             }
         });
+    }
+
+    function CreatePostValidation(){
+        var PostTitle=$("#postTitle").val();
+        var PostText=$("#postText").val();
+        if(PostTitle=="" || PostText==""){
+            $("#postCreateMsg").html("Post Title or Text Cannot be empty");
+            return false;
+        }
+        return true;
+    }
+
+    function EditPostValidation(){
+        var PostTitle=$("#editPostTitle").val();
+        var PostText=$("#editPostText").val();
+        if(PostTitle=="" || PostText==""){
+            $("#postEditMsg").html("Post Title or Text Cannot be empty");
+            return false;
+        }
+        return true;
+    }
+
+    function CreateCommenttValidation(){
+        var PostText=$("#commentText").val();
+        if(PostText==""){
+            $("#commentCreateMsg").html("Comment Text Cannot be empty");
+            return false;
+        }
+        return true;
+    }
+
+    function EditCommenttValidation(){
+        var PostText=$("#editCommentText").val();
+        if(PostText==""){
+            $("#commentEditMsg").html("Comment Text Cannot be empty");
+            return false;
+        }
+        return true;
     }
 });
