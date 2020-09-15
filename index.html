@@ -57,6 +57,7 @@
             <td><p id="postEditMsg"></p></td>
         </tr>
     </table>
+    <hr>
     <h3>Delete Post</h3>
     <table>
         <tr>
@@ -90,6 +91,106 @@
         <tbody id="posts">
 
         </tbody>
+    </table>
+    <hr>
+    <h3>Get Comments from Posts</h3>
+    <select id="commentPostSelect">
+
+    </select>
+    <button id="getComments">Get Comments</button><br><br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Comment Id</th>
+                <th>Comment Body</th>
+                <th>Post Id</th>
+            </tr>
+        </thead>
+        <tbody id="Comments">
+
+        </tbody>
+    </table>
+    <hr>
+    <h3>Create Comment</h3>
+    <table>
+        <tr>
+            <td>
+                Select Post
+            </td>
+            <td>
+                <select id="createCommentPostSelect">
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Comment Text</td>
+            <td><input type="text" id="commentText"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="createComment">Create Post</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><p id="commentCreateMsg"></p></td>
+        </tr>
+    </table>
+    <hr>
+    <h3>Edit Comment</h3>
+    <table>
+        <tr>
+            <td>Post Id</td>
+            <td>
+                <select id="editCommentPostSelect">
+
+                </select>
+            </td>
+            <td>Comment Id</td>
+            <td>
+                <select id="commentSelect">
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Comment Text</td>
+            <td><input type="text" id="editCommentText"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="editComment">Save Changes</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><p id="commentEditMsg"></p></td>
+        </tr>
+    </table>
+    <hr>
+    <h3>Delete Comment</h3>
+    <table>
+        <tr>
+            <td>Post Id</td>
+            <td>
+                <select id="deleteCommentPostSelect">
+
+                </select>
+            </td>
+            <td>Comment Id</td>
+            <td>
+                <select id="deleteCommentSelect">
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="deleteComment">Delete Comment</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><p id="commentDeleteMsg"></p></td>
+        </tr>
     </table>
     <hr>
 </body>
