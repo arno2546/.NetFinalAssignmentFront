@@ -35,6 +35,8 @@ $(document).ready(function(){
 
     $("#commentSelect").change(function(){
         splitComment=$("#commentSelect").val().split("--");
+        $("#editCommentText").val(splitComment[1]);
+        console.log(splitComment[1]);
     });
 
     $("#deleteCommentSelect").change(function(){
